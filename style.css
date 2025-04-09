@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Poppins"
+}
+#timertext{
+  position: absolute;
+  top: 25px;
+  right: 7px;
+ 
+}
+#clicksText{
+  position: absolute;
+  top: 88px;
+  right: 10px;
+}
+#ScoresText{
+  position: absolute;
+  top: 150px;
+  right: 7px;
+}
+
+#timer{
+  position: absolute;
+  top: 50px;
+  width: 40px;
+  padding: 7px;
+  height: 40px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  right: 10px;
+}
+#clicks{
+  position: absolute;
+  top:110px;
+  width: 40px;
+  padding: 7px;
+  height: 40px;
+  border: 2px solid black;
+  background-color: darkred;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  right: 10px;
+}
+#Scores{
+  position: absolute;
+  top:170px;
+  width: 40px;
+  padding: 7px;
+  height: 40px;
+  border: 2px solid black;
+  background-color: darkred;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  right: 10px;
+}
+#redText{
+    color: red;
+}
+body {
+    height: 100vh;
+  background-color:lightseagreen ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  }
+  #StartGameDiv{
+    text-align: center;
+  }
+
+  #gameStart{
+    display: flex;
+    justify-content: center;
+  }
+  #startGameBtn{
+ margin: 10px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background-color: crimson;
+      color: white;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+      font-size: 18px;
+      border: none;
+      transition: background-color 0.3s ease;
+
+  }
+  .flip_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 62%;
+    padding: 59px;
+    display: none;
+    background-color: lightgray;
+    border-radius: 15px;
+  
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; 
+  }
+  
+ 
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+ 
