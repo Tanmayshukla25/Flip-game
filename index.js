@@ -180,7 +180,8 @@ function timeCounting() {
     if (timers == 0 || score == 6) {
       flip_container.style.display = "none"
       GameOver.style.display = "block";
-      GameOver.innerText = `Clicked :${clickCount} , Times :${timers} And Your Score is ${score}`;
+      GameOver.innerText = `       Congratulations!!
+      Clicked :${clickCount} , Times :${timers} And Your Score is ${score}`;
      
       setTimeout(() => {
         GameOver.style.display = "none";

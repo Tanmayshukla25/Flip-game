@@ -244,9 +244,15 @@ display: none;
     .parent{
       margin-top: 30px;
     }
+    #navbar{
+      font-size: 15px;
+    }
     #StartGameDiv {
       text-align: center;
      font-size: 15px;
+  }
+  #GameOver {
+    font-size: 15px;
   }
   #redText {
     color: #edeb1d;
@@ -300,6 +306,12 @@ display: none;
     width: 150px;
     height: 150px;
     transform: rotateY(180deg);
+  }
+  #navbar{
+    font-size: 20px;
+  }
+  #GameOver {
+    font-size: 20px;
   }
   .flip-card-front {
     background-color: #bbb;
