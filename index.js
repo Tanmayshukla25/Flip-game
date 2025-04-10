@@ -32,7 +32,7 @@ let openImage = 0;
 let clickCount = 0;
 let timers = 60;
 let isProcessing = false;
-// let newRandomImages=RandomImage()
+
 
 timer.innerText = timers
 clicks.innerText = clickCount;
@@ -81,7 +81,7 @@ flipinner.forEach((cardInner, index) => {
   frontImage.addEventListener("click", () => {
 
     if (isProcessing) return;
-    // cardInner.style.transform = "rotateY(180deg)";
+   
     frontImage.parentElement.parentElement.classList.add("backSide");
 
     clickCount++;
