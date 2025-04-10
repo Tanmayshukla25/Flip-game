@@ -7,18 +7,18 @@
 #timertext{
   position: absolute;
   top: 25px;
-  right: 7px;
+  right: 12px;
  
 }
 #clicksText{
   position: absolute;
   top: 88px;
-  right: 10px;
+  right: 12px;
 }
 #ScoresText{
   position: absolute;
   top: 150px;
-  right: 7px;
+  right: 12px;
 }
 
 #timer{
@@ -32,7 +32,7 @@
   color: white;
   border-radius: 50%;
   text-align: center;
-  right: 10px;
+  right: 12px;
 }
 #clicks{
   position: absolute;
@@ -40,12 +40,12 @@
   width: 40px;
   padding: 7px;
   height: 40px;
-  border: 2px solid black;
-  background-color: darkred;
+  border: 2px solid crimson ;
+  background-color: crimson;
   color: white;
   border-radius: 50%;
   text-align: center;
-  right: 10px;
+  right: 12px;
 }
 #Scores{
   position: absolute;
@@ -53,19 +53,24 @@
   width: 40px;
   padding: 7px;
   height: 40px;
-  border: 2px solid black;
-  background-color: darkred;
+  border: 2px solid crimson;
+  background-color: crimson;
   color: white;
   border-radius: 50%;
   text-align: center;
-  right: 10px;
+  right: 12px;
 }
 #redText{
-    color: red;
+    color:lightcoral;
+    font-size: 20px;
 }
 body {
     height: 100vh;
-  background-color:lightseagreen ;
+  background-image: url("./images/backimg.jpg");
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +88,7 @@ body {
  margin: 10px;
       padding: 12px 20px;
       border-radius: 10px;
-      background-color: crimson;
+      background: linear-gradient(to right,red,darkred);
       color: white;
      display: flex;
      justify-content: center;
@@ -99,18 +104,23 @@ body {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 62%;
-    padding: 59px;
+    width: 67%;
+    padding:  40px 70px;
     display: none;
-    background-color: lightgray;
+    background-color: gray;
     border-radius: 15px;
   
+  }
+  .backSide{
+    transform: rotateY(180deg);
   }
   .flip-card {
     background-color: transparent;
     width: 200px;
+    margin: 8px;
+    border-radius: 5px;
     height: 200px;
-    border: 1px solid #f1f1f1;
+    /* border: 2px solid #f1f1f1; */
     perspective: 1000px; 
   }
   
@@ -124,15 +134,14 @@ body {
     transform-style: preserve-3d;
   }
   
-  
+/*   
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
+  } */
   
   .flip-card-front, .flip-card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    border-radius: 10px !important;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
   }
@@ -140,13 +149,29 @@ body {
 
   .flip-card-front {
     background-color: #bbb;
+    width: 200px;
+    height: 200px;
     color: black;
   }
+  .flip-card-front img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
   
   
   .flip-card-back {
     background-color: dodgerblue;
     color: white;
+    width: 200px;
+    height: 200px;
     transform: rotateY(180deg);
+  }
+  .flip-card-back img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
   }
  
