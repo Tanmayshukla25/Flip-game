@@ -216,15 +216,13 @@ btnboard.addEventListener("click", () => {
   CopyLocalDATA.sort((a, b) => b.score - a.score);
 
   let table = document.createElement("table");
-  table.style.color="white"
-  table.style.fontSize="20px"
-  table.style.borderCollapse = "collapse";
-  table.style.width = "100%";
+  table.classList.add("tables")
+ 
  
 
   let thead = document.createElement("thead");
   let headerRow = document.createElement("tr");
-
+  headerRow.classList.add("headerRow")
   let headers = ["Name", "Date", "Score","Time","Clicks"];
   headers.forEach(text => {
     let th = document.createElement("th");
@@ -245,24 +243,29 @@ btnboard.addEventListener("click", () => {
     cell1.innerText = val.name;
     cell1.style.border = "1px solid white";
     cell1.style.padding = "8px";
+    cell1.classList.add("lead")
 
     let cell2 = document.createElement("td");
     cell2.innerText = val.date;
+    cell2.classList.add("lead")
     cell2.style.border = "1px solid white";
     cell2.style.padding = "8px";
 
     let cell3 = document.createElement("td");
     cell3.innerText = val.score;
+    cell3.classList.add("lead")
     cell3.style.border = "1px solid white";
     cell3.style.padding = "8px";
 
     let cell4 = document.createElement("td");
     cell4.innerText = val.time;
+    cell4.classList.add("lead")
     cell4.style.border = "1px solid white";
     cell4.style.padding = "8px";
 
     let cell5 = document.createElement("td");
     cell5.innerText = val.clicks;
+    cell5.classList.add("lead")
     cell5.style.border = "1px solid white";
     cell5.style.padding = "8px";
 
