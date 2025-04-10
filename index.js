@@ -63,7 +63,7 @@ startGameBtn.addEventListener("click", () => {
  
   clickCount = 0;
   score = 0;
-  timers = 10;
+  timers = 60;
   openImage = 0;
   imageStore = [];
   noRepeatImage = [];
