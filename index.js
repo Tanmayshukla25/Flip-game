@@ -76,6 +76,10 @@ startGameBtn.addEventListener("click", () => {
 
  
   flipback.forEach(back => (back.innerHTML = ""));
+  flipinner.forEach(card => {
+    card.classList.remove("backSide");
+  });
+  
   creatBackImages(); 
 
   StartGameDiv.style.display = "none";
@@ -89,13 +93,16 @@ startGameBtn.addEventListener("click", () => {
 
 
 function creatBackImages() {
-  for (let i = 0; i < ActualImg.length; i++) {
+  noRepeatImage = []; // Reset the no-repeat index list for every new game
+
+  for (let i = 0; i < flipback.length; i++) {
+    flipback[i].innerHTML = ""; // Clear old images
     const backImage = document.createElement("img");
     backImage.src = ActualImg[RandomImage()];
-    flipback[i].append(backImage);
-
+    flipback[i].appendChild(backImage);
   }
 }
+
 
 function RandomImage() {
   let RandomIndex = Math.floor(Math.random() * ActualImg.length);
@@ -166,7 +173,7 @@ flipinner.forEach((cardInner, index) => {
 
 
 
-// timeCounting()
+
 function timeCounting() {
   let time = setInterval(() => {
     timer.innerText = timers;
@@ -178,19 +185,20 @@ function timeCounting() {
 
 
     if (timers == 0 || score == 6) {
+      
       flip_container.style.display = "none"
       GameOver.style.display = "block";
       GameOver.innerText = `       Congratulations!!
       Clicked :${clickCount} , Times :${timers} And Your Score is ${score}`;
-     
+
+      clearInterval(time);
       setTimeout(() => {
         GameOver.style.display = "none";
       StartGameDiv.style.display = "block";
+      
 
        
     }, 5000);
-
-      clearInterval(time);
     }
     else {
       timers--;
