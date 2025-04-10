@@ -152,9 +152,21 @@ margin-top: 30px;
       border-radius:  10px 0px 0 10px;
       border: unset;
       font-size: 18px;
-    
-   
+  
   }
+  #copyData{
+    width: 100%;
+    height: 91vh;
+    position:absolute;
+    top: 70px;
+    background-image: url(./images/backimg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+display: none;
+
+    text-align: center;
+}
   .backSide{
     transform: rotateY(180deg);
   }
