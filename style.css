@@ -10,6 +10,12 @@
   right: 12px;
  
 }
+.parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
 #clicksText{
   position: absolute;
   top: 88px;
@@ -64,16 +70,43 @@
     color:lightcoral;
     font-size: 20px;
 }
+#navbar {
+   
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(1, 37, 11, 0.352);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+}
+
+#btnboard{
+  color: white;
+  background-color: rgba(128, 0, 128, 0);
+  font-size: 20px;
+  border: unset;
+  padding: 0px 5px;
+  
+ 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+} #btnboard:hover{
+  transform: scale(1.1);
+  font-size: bold;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
 body {
     height: 100vh;
   background-image: url("./images/backimg.jpg");
   background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 100vh; 
  
   }
   #StartGameDiv{
@@ -81,13 +114,13 @@ body {
   }
 
   #gameStart{
-    display: flex;
+    display: ruby;
     justify-content: center;
   }
   #startGameBtn{
- margin: 10px;
+margin-top: 10px;
       padding: 12px 20px;
-      border-radius: 10px;
+      border-radius: 10px 0 0 10px;
       background: linear-gradient(to right,red,darkred);
       color: white;
      display: flex;
@@ -104,23 +137,40 @@ body {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 67%;
-    padding:  40px 70px;
+    width: 60%;
+margin-top: 30px;
+    padding:  20px 70px;
     display: none;
     background-color: gray;
     border-radius: 15px;
   
   }
+  #Inputbox{
+
+      padding: 12px 20px;
+      border-radius: 0px 10px 10px 0;
+      border: unset;
+      font-size: 18px;
+      margin-right: 10px;
+   
+  }
   .backSide{
     transform: rotateY(180deg);
   }
+  #GameOver {
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    font-size: 30px;
+    display: none;
+  }
   .flip-card {
     background-color: transparent;
-    width: 200px;
+    width: 170px;
     margin: 8px;
     border-radius: 5px;
-    height: 200px;
-    /* border: 2px solid #f1f1f1; */
+    height: 170px;
+    
     perspective: 1000px; 
   }
   
@@ -149,8 +199,8 @@ body {
 
   .flip-card-front {
     background-color: #bbb;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     color: black;
   }
   .flip-card-front img{
@@ -164,8 +214,8 @@ body {
   .flip-card-back {
     background-color: dodgerblue;
     color: white;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     transform: rotateY(180deg);
   }
   .flip-card-back img{
@@ -174,4 +224,83 @@ body {
     border-radius: 10px;
     object-fit: cover;
   }
- 
+  @media screen and (min-width:320px) and (max-width:570px){
+    #score{
+        font-size: 20px;
+    }
+    #StartGameDiv {
+      text-align: center;
+     font-size: 10px;
+  }
+  #redText {
+    color: lightcoral;
+    font-size: 10px;
+}
+#startGameBtn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px 0 0 5px;
+  
+  font-size: 10px;
+
+}
+#Inputbox {
+  padding: 5px 10px;
+  border-radius: 0px 5px 5px 0;
+  border: unset;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.flip_container {
+  width: unset;
+  margin: 10px;
+  padding: 33px 64px 28px 42px;
+  
+}
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  width: 50px;
+  height: 50px;
+  transform: rotateY(180deg);
+}
+.flip-card-front {
+  background-color: #bbb;
+  width: 50px;
+  height: 50px;
+  color: black;
+}
+.flip-card {
+  width: 50px;
+  height: 50px;
+}
+}
+@media screen and (min-width:560px) and (max-width:1100px){
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    width: 150px;
+    height: 150px;
+    transform: rotateY(180deg);
+  }
+  .flip-card-front {
+    background-color: #bbb;
+    width: 150px;
+    height: 150px;
+    color: black;
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+  }
+  .flip_container {
+    width: 90%;
+    margin-top: 30px;
+    padding: 20px 50px;
+    display: none;
+    background-color: gray;
+    border-radius: 15px;
+}
+* 
+}
