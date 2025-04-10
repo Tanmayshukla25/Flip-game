@@ -46,12 +46,12 @@ startGameBtn.addEventListener("click", () => {
   obj = { name: value, date: new Date().toLocaleString(), score: 0,Time:0};
   localArr.push(obj)
   localStorage.setItem("localArr",JSON.stringify(localArr))
-  console.log(localArr);
-  
+
 
 
   StartGameDiv.style.display = "none"
   flip_container.style.display = "flex"
+  timeCounting()
 })
 
 function creatBackImages() {
@@ -90,7 +90,7 @@ flipinner.forEach((cardInner, index) => {
    let getARR=JSON.parse(localStorage.getItem("localArr"))
    getARR[getARR.length-1].click=clickCount
    localStorage.setItem("localArr",JSON.stringify(getARR))
-   console.log(localArr);
+ 
    
     openImage++;
 
@@ -99,13 +99,15 @@ flipinner.forEach((cardInner, index) => {
     let backImage = frontImage.parentElement.nextElementSibling.children[0];
     imageStore.push(backImage);
    
-
+  
     if (openImage > 1)
       isProcessing = true;
-    if (imageStore[0].src === imageStore[1].src) {
+    if (imageStore[0].src=== imageStore[1].src) {
       openImage = 0,
         imageStore.length = 0;
       score++;
+
+      
       Scores.innerText = score;
       isProcessing = false;
     }
@@ -124,7 +126,8 @@ flipinner.forEach((cardInner, index) => {
 });
 
 
-timeCounting()
+
+// timeCounting()
 function timeCounting() {
   let time = setInterval(() => {
     timer.innerText = timers
@@ -132,7 +135,7 @@ function timeCounting() {
     if (timers == 0 || score == 6) {
       flip_container.style.display = "none"
       GameOver.style.display = "block";
-      GameOver.innerText = `Clicked ${clickCount} Times ${timers} And Your Score is ${score}`;
+      GameOver.innerText = `Clicked :${clickCount} , Times :${timers} And Your Score is ${score}`;
 
 
       clearInterval(time);

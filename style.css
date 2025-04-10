@@ -67,7 +67,7 @@
   right: 12px;
 }
 #redText{
-    color:lightcoral;
+    color:#edeb1d;
     font-size: 20px;
 }
 #navbar {
@@ -111,6 +111,7 @@ body {
   }
   #StartGameDiv{
     text-align: center;
+    font-size: 25px;
   }
 
   #gameStart{
@@ -120,7 +121,7 @@ body {
   #startGameBtn{
 margin-top: 10px;
       padding: 12px 20px;
-      border-radius: 10px 0 0 10px;
+      border-radius: 0 10px 10px 0px;
       background: linear-gradient(to right,red,darkred);
       color: white;
      display: flex;
@@ -148,10 +149,10 @@ margin-top: 30px;
   #Inputbox{
 
       padding: 12px 20px;
-      border-radius: 0px 10px 10px 0;
+      border-radius:  10px 0px 0 10px;
       border: unset;
       font-size: 18px;
-      margin-right: 10px;
+    
    
   }
   .backSide{
@@ -236,7 +237,7 @@ margin-top: 30px;
      font-size: 15px;
   }
   #redText {
-    color: lightcoral;
+    color: #edeb1d;
     font-size: 10px;
 }
 #startGameBtn {
