@@ -228,9 +228,12 @@ margin-top: 30px;
     #score{
         font-size: 20px;
     }
+    .parent{
+      margin-top: 30px;
+    }
     #StartGameDiv {
       text-align: center;
-     font-size: 10px;
+     font-size: 15px;
   }
   #redText {
     color: lightcoral;
@@ -241,38 +244,39 @@ margin-top: 30px;
   padding: 5px 10px;
   border-radius: 5px 0 0 5px;
   
-  font-size: 10px;
+  font-size: 15px;
 
 }
 #Inputbox {
   padding: 5px 10px;
   border-radius: 0px 5px 5px 0;
   border: unset;
-  font-size: 10px;
+  font-size: 15px;
   margin-right: 10px;
 }
 .flip_container {
   width: unset;
   margin: 10px;
+  margin-top: 40px;
   padding: 33px 64px 28px 42px;
   
 }
 .flip-card-back {
   background-color: dodgerblue;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   transform: rotateY(180deg);
 }
 .flip-card-front {
   background-color: #bbb;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   color: black;
 }
 .flip-card {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 }
 @media screen and (min-width:560px) and (max-width:1100px){
@@ -295,12 +299,14 @@ margin-top: 30px;
     height: 150px;
   }
   .flip_container {
+
+ 
     width: 90%;
     margin-top: 30px;
-    padding: 20px 50px;
+    padding: 20px 0px;
     display: none;
     background-color: gray;
     border-radius: 15px;
 }
-* 
+
 }
