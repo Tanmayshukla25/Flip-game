@@ -219,8 +219,8 @@ btnboard.addEventListener("click", () => {
   table.style.color="white"
   table.style.fontSize="20px"
   table.style.borderCollapse = "collapse";
-  table.style.width = "90%";
-  table.style.marginLeft="5%"
+  table.style.width = "100%";
+ 
 
   let thead = document.createElement("thead");
   let headerRow = document.createElement("tr");
