@@ -243,16 +243,16 @@ margin-top: 30px;
 #startGameBtn {
   margin-top: 10px;
   padding: 8px 14px;
-  border-radius: 0 10px 10px 0px;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0px;
+
   font-size: 12px;
 
 }
 #Inputbox {
   padding: 8px 14px;
-  border-radius:  10px 0px 0 10px;
+  border-radius:  5px 0px 0 5px;
   border: unset;
-  border-radius: 5px;
+
   font-size: 12px;
 
 }
