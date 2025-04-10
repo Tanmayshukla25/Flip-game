@@ -242,10 +242,10 @@ display: none;
         font-size: 20px;
     }
     .parent{
-      margin-top: 30px;
+      margin-top: 40px;
     }
     #navbar{
-      font-size: 15px;
+      font-size: 10px;
     }
     #StartGameDiv {
       text-align: center;
@@ -267,7 +267,7 @@ display: none;
 
 }
 #Inputbox {
-  padding: 8px 14px;
+  padding: 8px 10px;
   border-radius:  5px 0px 0 5px;
   border: unset;
 
