@@ -86,7 +86,7 @@ flipinner.forEach((cardInner, index) => {
 
     clickCount++;
 
-    // clicks.innerText = clickCount;
+    clicks.innerText = clickCount;
    let getARR=JSON.parse(localStorage.getItem("localArr"))
    getARR[getARR.length-1].click=clickCount
    localStorage.setItem("localArr",JSON.stringify(getARR))
