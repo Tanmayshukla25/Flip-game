@@ -45,7 +45,9 @@ Scores.innerText = score;
 creatBackImages()
 startGameBtn.addEventListener("click", () => {
   const value = input.value.trim();
-  if (value === "") return;
+  if (value === "") {
+    alert("Please Enter Your Name")
+  }
 
   let savedData = JSON.parse(localStorage.getItem("localArr")) || [];
 
@@ -96,7 +98,7 @@ function creatBackImages() {
   noRepeatImage = [];
 
   for (let i = 0; i < flipback.length; i++) {
-    flipback[i].innerHTML = "";
+    flipback[i].innerHTML = ""; 
     const backImage = document.createElement("img");
     backImage.src = ActualImg[RandomImage()];
     flipback[i].appendChild(backImage);
@@ -211,13 +213,17 @@ function timeCounting() {
 btnboard.addEventListener("click", () => {
   let CopyLocalDATA = JSON.parse(localStorage.getItem("localArr"));
   copyData.innerHTML = "";
-  copyData.style.display = "block";
-if(CopyLocalDATA>0){
-  CopyLocalDATA.sort((a, b) => b.score - a.score);
-}else{
-  copyData.innerText="NO DATA TO SHOW YET !!!"
-  copyData.classList.add("NoDATA")
-}
+  
+  if (CopyLocalDATA && CopyLocalDATA.length > 0) {
+    copyData.style.display = "block";
+    CopyLocalDATA.sort((a, b) => b.score - a.score);
+   
+  } else {
+    copyData.style.display = "block";
+    copyData.innerText = "NO DATA TO SHOW YET !!!";
+    copyData.classList.add("NoDATA");
+  }
+  
  
 
   let table = document.createElement("table");
