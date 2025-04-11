@@ -96,7 +96,7 @@ function creatBackImages() {
   noRepeatImage = [];
 
   for (let i = 0; i < flipback.length; i++) {
-    flipback[i].innerHTML = ""; // Clear old images
+    flipback[i].innerHTML = ""; 
     const backImage = document.createElement("img");
     backImage.src = ActualImg[RandomImage()];
     flipback[i].appendChild(backImage);
