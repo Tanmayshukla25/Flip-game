@@ -237,6 +237,11 @@ display: none;
     border-collapse: collapse;
     width: 100%;
   }
+  .NoDATA{
+    font-size: 30px;
+    color: white;
+    padding-top: 55px;
+  }
  
   .flip-card-back img{
     width: 100%;

@@ -93,10 +93,10 @@ startGameBtn.addEventListener("click", () => {
 
 
 function creatBackImages() {
-  noRepeatImage = []; // Reset the no-repeat index list for every new game
+  noRepeatImage = [];
 
   for (let i = 0; i < flipback.length; i++) {
-    flipback[i].innerHTML = ""; // Clear old images
+    flipback[i].innerHTML = "";
     const backImage = document.createElement("img");
     backImage.src = ActualImg[RandomImage()];
     flipback[i].appendChild(backImage);
@@ -212,8 +212,13 @@ btnboard.addEventListener("click", () => {
   let CopyLocalDATA = JSON.parse(localStorage.getItem("localArr"));
   copyData.innerHTML = "";
   copyData.style.display = "block";
-
+if(CopyLocalDATA>0){
   CopyLocalDATA.sort((a, b) => b.score - a.score);
+}else{
+  copyData.innerText="NO DATA TO SHOW YET !!!"
+  copyData.classList.add("NoDATA")
+}
+ 
 
   let table = document.createElement("table");
   table.classList.add("tables")
@@ -278,6 +283,4 @@ btnboard.addEventListener("click", () => {
 });
 
 
-window.addEventListener("load", () => {
-  localStorage.clear()
-})
+
