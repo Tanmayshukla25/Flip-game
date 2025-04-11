@@ -47,6 +47,7 @@ startGameBtn.addEventListener("click", () => {
   const value = input.value.trim();
   if (value === "") {
     alert("Please Enter Your Name")
+    return;
   }
 
   let savedData = JSON.parse(localStorage.getItem("localArr")) || [];
