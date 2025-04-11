@@ -45,10 +45,7 @@ Scores.innerText = score;
 creatBackImages()
 startGameBtn.addEventListener("click", () => {
   const value = input.value.trim();
-  if (value === "") {
-    alert("Please Enter Your Name")
-    return;
-  }
+  if (value === "") return;
 
   let savedData = JSON.parse(localStorage.getItem("localArr")) || [];
 
@@ -99,7 +96,7 @@ function creatBackImages() {
   noRepeatImage = [];
 
   for (let i = 0; i < flipback.length; i++) {
-    flipback[i].innerHTML = ""; 
+    flipback[i].innerHTML = ""; // Clear old images
     const backImage = document.createElement("img");
     backImage.src = ActualImg[RandomImage()];
     flipback[i].appendChild(backImage);
