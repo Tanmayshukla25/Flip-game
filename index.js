@@ -287,4 +287,8 @@ btnboard.addEventListener("click", () => {
 });
 
 
+btnboard.addEventListener("dblclick",()=>{
+  localStorage.clear();
+})
+
 
